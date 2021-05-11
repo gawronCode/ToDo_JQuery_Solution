@@ -28,6 +28,8 @@ namespace ToDo_JQuery
         {
 
             services.AddControllers();
+            services.AddControllersWithViews().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+            services.AddRazorPages().AddRazorRuntimeCompilation();
 
         }
 
@@ -36,6 +38,7 @@ namespace ToDo_JQuery
         {
             if (env.IsDevelopment())
             {
+                app.UseBrowserLink();
                 app.UseDeveloperExceptionPage();
             }
 
@@ -48,6 +51,7 @@ namespace ToDo_JQuery
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

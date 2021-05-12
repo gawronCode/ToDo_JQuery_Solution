@@ -97,4 +97,39 @@ footer {
     padding-bottom: 50px;
 }
 
+.taskInputDiv {
+    display: block;
+    height: 60px;
+    margin-top: 20px;
+}
 
+.taskInput {
+    display: inline-block;
+    width: 40%;
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+    margin-right: 5px;
+    cursor: text;
+}
+
+    .taskInput:focus {
+        outline: none !important;
+        border: 2px solid red;
+        border-radius: 5px;
+    }
+
+.taskInputBtn {
+    display: inline-block;
+    font-size: 22px;
+    padding: 3px 7px 3px 7px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: silver;
+}
+
+    .taskInputBtn:hover {
+        background-color: gray;
+        cursor: pointer;
+    }
